@@ -1,0 +1,26 @@
+{
+  "name": "aws-serverless-message-processor",
+  "version": "1.0.0",
+  "description": "Just a toy project testing out some AWS and Serverless features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joensindholt/aws-serverless-message-processor.git"
+  },
+  "keywords": [
+    "AWS",
+    "Serverless"
+  ],
+  "author": "Joen Sindholt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joensindholt/aws-serverless-message-processor/issues"
+  },
+  "homepage": "https://github.com/joensindholt/aws-serverless-message-processor#readme",
+  "dependencies": {
+    "aws-sdk": "^2.140.0"
+  }
+}

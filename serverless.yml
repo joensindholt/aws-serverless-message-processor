@@ -1,0 +1,25 @@
+service: message-processor
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  
+functions:
+  log:
+    handler: handler.log
+    # environment:
+    #   BUCKET: ${self:custom.bucket}
+
+# custom:
+#   bucket: <your-bucket-name>
+
+# provider:
+#   name: aws
+#   runtime: nodejs4.3
+#   stage: dev
+#   region: us-west-1
+#   iamRoleStatements:
+#     - Effect: Allow
+#       Action:
+#         - s3:PutObject
+#       Resource: "arn:aws:s3:::${self:custom.bucket}/*"
