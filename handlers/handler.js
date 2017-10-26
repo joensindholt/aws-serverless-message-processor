@@ -6,5 +6,15 @@
 // const s3 = new AWS.S3();
 
 module.exports.log = (event, context, callback) => {
-  console.log('logging', event);
+  console.log('log:', event);
+
+  const response = {
+      statusCode: 200,
+      body: JSON.stringify({
+          message: 'Hi there',
+          input: event
+      })
+  };
+
+  callback(null, response);
 };
