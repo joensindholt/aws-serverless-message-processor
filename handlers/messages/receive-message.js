@@ -1,6 +1,8 @@
-var QUEUE_URL = '{get queue url somehow}';
 var AWS = require('aws-sdk');
+
 var sqs = new AWS.SQS({ region: 'eu-west-1' });
+
+var QUEUE_URL = '{get queue url somehow}';
 
 module.exports.handler = (event, context, callback) => {
   console.log('POST receiveMessage:', event);
