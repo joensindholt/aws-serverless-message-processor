@@ -1,15 +1,16 @@
 var AWS = require('aws-sdk');
 
-var sqs = new AWS.SQS({ region: 'eu-west-1' });
-
-var QUEUE_URL = '{get queue url somehow}';
+var sqs = new AWS.SQS({ region: process.env.region });
 
 module.exports.handler = (event, context, callback) => {
   console.log('Receive Message:', event);
 
+  const queueUrl = `https://sqs.${process.env.region}.amazonaws.com/${require('alai').parse(context)}/${process.env.sqs}`;
+  console.log('SQS Queue Url:', queueUrl);
+
   var params = {
     MessageBody: JSON.stringify(event),
-    QueueUrl: QUEUE_URL
+    QueueUrl: queueUrl
   };
 
   sqs.sendMessage(params, (err, data) => {
@@ -20,7 +21,7 @@ module.exports.handler = (event, context, callback) => {
         "headers": {},
         "body": JSON.stringify(event)
       };
-      
+
       callback(null, response);
     } else {
       console.log('error:', "Fail Send Message" + err);

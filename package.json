@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/joensindholt/aws-serverless-message-processor#readme",
   "dependencies": {
-    "aws-sdk": "^2.140.0"
+    "alai": "^1.0.3",
+    "aws-sdk": "^2.140.0",
+    "lawos": "^1.1.5"
   }
 }
