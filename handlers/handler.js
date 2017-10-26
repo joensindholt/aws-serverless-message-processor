@@ -6,7 +6,7 @@
 // const s3 = new AWS.S3();
 
 module.exports.log = (event, context, callback) => {
-  console.log('log:', event);
+  console.log('Log:', event);
 
   const response = {
       statusCode: 200,
