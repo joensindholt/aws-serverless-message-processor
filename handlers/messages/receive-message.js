@@ -1,4 +1,4 @@
-var QUEUE_URL = 'https://sqs.eu-west-1.amazonaws.com/812954953618/MessageProcessorQueue';
+var QUEUE_URL = '{get queue url somehow}';
 var AWS = require('aws-sdk');
 var sqs = new AWS.SQS({ region: 'eu-west-1' });
 
